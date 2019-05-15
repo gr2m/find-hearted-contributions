@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-$ find-hearted-contributions.js [options]
+$ find-hearted-contributions [options]
 
 Options:
   --help     Show help                                                 [boolean]
@@ -21,7 +21,7 @@ Options:
 ## Example
 
 ```
-$ npx find-hearted-contributions.js \
+$ npx find-hearted-contributions \
   --token 0123456789012345678901234567890123456789 \
   --in https://github.com/octokit \
   --by gr2m --since 2019-05-01
