@@ -1,0 +1,34 @@
+{
+  "name": "find-hearted-contributions",
+  "version": "0.0.0-development",
+  "description": "Find contributions that you bookmarked my adding a heart emoji",
+  "main": "index.js",
+  "bin": "bin/find-hearted-contributions.js",
+  "scripts": {
+    "test": "standard",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "github",
+    "maintaining",
+    "cli"
+  ],
+  "author": "Gregor Martynus (https://twitter.com/gr2m",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gr2m/find-hearted-contributions.git"
+  },
+  "dependencies": {
+    "@octokit/plugin-retry": "^2.2.0",
+    "@octokit/plugin-throttling": "^2.5.0",
+    "@octokit/rest": "^16.25.5",
+    "jsonfile": "^5.0.0",
+    "mkdirp": "^0.5.1",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "semantic-release": "^15.13.12"
+  }
+}
