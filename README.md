@@ -50,6 +50,16 @@ hearted items:
 ♥️ https://github.com/octokit/webhooks.js/issues/76
 ```
 
+## Why?
+
+As an Open Source project maintainer, I like to give shoutouts as part of a regular project update. For example, here is my updates issue for Octokit: [octokit/rest.js#620)](https://github.com/octokit/rest.js/issues/620). Here is a [comment containing a typical "Thanks" section](https://github.com/octokit/rest.js/issues/620#issuecomment-484601114).
+
+But not all contributions are worthy a shoutout. Not all worthy contributions are code. It was quite time consuming to go through all contributions since the last update and find the ones I’d like to give a shout out for. So I started to use the ❤️ reaction on issues, pull requests and comments as a way of boomarking the contributions for a later shoutout as I see them.
+
+Digging out these hearted items turned out harder than I thought, so I wrote this CLI to help me with that from here on.
+
+If you find it useful, please share where / how you use it 😊
+
 ## Contributing
 
 This is a very early version of something that I hope to become very useful for many maintainers out there. I’m open to any kind of contributions, be it ideas, code improvemetns, tests, or documentation.
