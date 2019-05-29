@@ -1,6 +1,6 @@
 # find-hearted-contributions
 
-> Find contributions that you bookmarked my adding a heart emoji
+> Find contributions that you bookmarked by a heart emoji
 
 ## Usage
 
