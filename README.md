@@ -10,6 +10,7 @@ $ find-hearted-contributions [options]
 Options:
   --help     Show help                                                 [boolean]
   --version  Show version number                                       [boolean]
+  --token    GitHub auth token                               [string]
   --in       GitHub organization URL                         [string] [required]
   --by       GitHub username                                 [string] [required]
   --since    timestamp in ISO 8601 format or GitHub issue URL, in which case
@@ -61,9 +62,13 @@ Digging out these hearted items turned out harder than I thought, so I wrote thi
 
 If you find it useful, please share where / how you use it 😊
 
+## Usage
+
+You must pass a GitHub personal authentication token. This project requires the "public_repo" scope for public repositories, "repo" scope for private repositories.
+
 ## Contributing
 
-This is a very early version of something that I hope to become very useful for many maintainers out there. I’m open to any kind of contributions, be it ideas, code improvemetns, tests, or documentation.
+This is a very early version of something that I hope to become very useful for many maintainers out there. I’m open to any kind of contributions, be it ideas, code improvements, tests, or documentation.
 
 Thanks!
 
