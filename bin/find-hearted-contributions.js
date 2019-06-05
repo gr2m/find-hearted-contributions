@@ -14,7 +14,7 @@ var argv = yargs
     type: 'string'
   })
   .option('in', {
-    description: 'GitHub organization URL',
+    description: 'GitHub organization URL, or the repository url',
     demandOption: true,
     type: 'string'
   })

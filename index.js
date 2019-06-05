@@ -29,8 +29,8 @@ async function findHeartedContributions (options) {
 
   octokit.hook.before('request', () => process.stdout.write('.'))
 
-  if (!/^https:\/\/github\.com\/[^/]+$/.test(options.in)) {
-    throw new TypeError('"in" option must be a GitHub or url (e.g. "https://github.com/octokit"')
+  if (!/^https:\/\/github\.com\/.+$/.test(options.in)) {
+    throw new TypeError('"in" option must be a GitHub repo url (e.g. "https://github.com/octokit"')
   }
 
   const owner = options.in.substr('https://github.com/'.length)
@@ -41,12 +41,18 @@ async function findHeartedContributions (options) {
     issuesAndPullRequestUrls: [],
     commentsUrls: [],
     comments: [],
+    repoOnly: owner.split('/')[1],
     ...options
   }
 
   try {
     state.since = await getLastUpdateTimestamp(state)
-    state.repositories = await getRepositories(state)
+    if (state.repoOnly) {
+      state.owner = state.owner.split('/')[0]
+      state.repositories = [state.repoOnly]
+    } else {
+      state.repositories = await getRepositories(state)
+    }
 
     for (const repositoryName of state.repositories) {
       const issuesAndPullRequestUrls = await getIssuesAndPullRequestsForRepository(state, repositoryName)
