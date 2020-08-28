@@ -5,7 +5,9 @@
   "main": "index.js",
   "bin": "bin/find-hearted-contributions.js",
   "scripts": {
-    "test": "standard",
+    "lint": "prettier --check 'lib/**/*' index.js *.md package.json",
+    "lint:fix": "prettier --write 'lib/**/*' index.js *.md package.json",
+    "test": "npm run -s lint",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -25,10 +27,10 @@
     "@octokit/rest": "^16.25.5",
     "jsonfile": "^5.0.0",
     "mkdirp": "^0.5.1",
+    "prettier": "^2.1.1",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
-    "standard": "^12.0.1",
     "semantic-release": "^15.13.12"
   }
 }
