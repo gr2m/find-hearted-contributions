@@ -31,6 +31,6 @@
     "yargs": "^13.2.4"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^17.2.3"
   }
 }
