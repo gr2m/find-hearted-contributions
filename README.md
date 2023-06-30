@@ -41,20 +41,20 @@ hearted items:
 ♥️ https://github.com/octokit/oauth-login-url.js/pull/6
 ♥️ https://github.com/octokit/request.js/pull/45
 ♥️ https://github.com/octokit/request.js/pull/51
-♥️ https://github.com/octokit/rest.js/issues/1313#issuecomment-486644044
-♥️ https://github.com/octokit/rest.js/issues/1343
-♥️ https://github.com/octokit/rest.js/issues/1348#issuecomment-487853292
-♥️ https://github.com/octokit/rest.js/issues/1354#issuecomment-491195478
-♥️ https://github.com/octokit/rest.js/issues/1355
-♥️ https://github.com/octokit/rest.js/issues/1357
-♥️ https://github.com/octokit/rest.js/pull/1346
+♥️ https://github.com/octokit/octokit.js/issues/1313#issuecomment-486644044
+♥️ https://github.com/octokit/octokit.js/issues/1343
+♥️ https://github.com/octokit/octokit.js/issues/1348#issuecomment-487853292
+♥️ https://github.com/octokit/octokit.js/issues/1354#issuecomment-491195478
+♥️ https://github.com/octokit/octokit.js/issues/1355
+♥️ https://github.com/octokit/octokit.js/issues/1357
+♥️ https://github.com/octokit/octokit.js/pull/1346
 ♥️ https://github.com/octokit/webhooks.js/issues/63#issuecomment-492793593
 ♥️ https://github.com/octokit/webhooks.js/issues/76
 ```
 
 ## Why?
 
-As an Open Source project maintainer, I like to give shoutouts as part of a regular project update. For example, here is my updates issue for Octokit: [octokit/rest.js#620)](https://github.com/octokit/rest.js/issues/620). Here is a [comment containing a typical "Thanks" section](https://github.com/octokit/rest.js/issues/620#issuecomment-484601114).
+As an Open Source project maintainer, I like to give shoutouts as part of a regular project update. For example, here is my updates issue for Octokit: [octokit/octokit.js#620)](https://github.com/octokit/octokit.js/issues/620). Here is a [comment containing a typical "Thanks" section](https://github.com/octokit/octokit.js/issues/620#issuecomment-484601114).
 
 But not all contributions are worthy a shoutout. Not all worthy contributions are code. It was quite time consuming to go through all contributions since the last update and find the ones I’d like to give a shout out for. So I started to use the ❤️ reaction on issues, pull requests and comments as a way of boomarking the contributions for a later shoutout as I see them.
 
