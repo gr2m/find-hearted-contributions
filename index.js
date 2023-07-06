@@ -1,18 +1,15 @@
-module.exports = findHeartedContributions;
+import { Octokit } from "octokit";
 
-const getLastUpdateTimestamp = require("./lib/get-last-update-timestamp");
-const getRepositories = require("./lib/get-repositories");
-const getIssuesAndPullRequestsForRepository = require("./lib/get-issues-and-pull-requests-for-repository");
-const getCommentsForIssueOrPullRequestUrl = require("./lib/get-comments-for-issue-or-pull-request-url");
-const getCommitCommentsForRepository = require("./lib/get-commit-comments-for-repository");
-const getUrlIfHearted = require("./lib/get-url-if-hearted");
+import getLastUpdateTimestamp from "./lib/get-last-update-timestamp.js";
+import getRepositories from "./lib/get-repositories.js";
+import getIssuesAndPullRequestsForRepository from "./lib/get-issues-and-pull-requests-for-repository.js";
+import getCommentsForIssueOrPullRequestUrl from "./lib/get-comments-for-issue-or-pull-request-url.js";
+import getCommitCommentsForRepository from "./lib/get-commit-comments-for-repository.js";
+import getUrlIfHearted from "./lib/get-url-if-hearted.js";
+import cachePlugin from "./lib/cache-plugin.js";
 
-const { Octokit } = require("octokit");
-
-async function findHeartedContributions(options) {
-  const MyOctokit = options.cache
-    ? Octokit.plugin(require("./lib/cache-plugin"))
-    : Octokit;
+export default async function findHeartedContributions(options) {
+  const MyOctokit = options.cache ? Octokit.plugin(cachePlugin) : Octokit;
   const octokit = new MyOctokit({
     auth: options.token,
   });
