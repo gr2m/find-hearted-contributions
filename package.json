@@ -27,7 +27,6 @@
     "yargs": "^13.2.4"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "semantic-release": "^21.0.1"
+    "prettier": "^3.0.0"
   }
 }
