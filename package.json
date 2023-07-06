@@ -8,8 +8,7 @@
   "scripts": {
     "lint": "prettier --check '{lib,bin}/**/*' index.js *.md package.json",
     "lint:fix": "prettier --write '{lib,bin}/**/*' index.js *.md package.json",
-    "test": "npm run -s lint",
-    "semantic-release": "semantic-release"
+    "test": "npm run -s lint"
   },
   "keywords": [
     "github",
