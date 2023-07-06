@@ -19,11 +19,9 @@
   "license": "ISC",
   "repository": "github:gr2m/find-hearted-contributions",
   "dependencies": {
-    "@octokit/plugin-retry": "^2.2.0",
-    "@octokit/plugin-throttling": "^2.5.0",
-    "@octokit/rest": "^16.25.5",
     "jsonfile": "^5.0.0",
     "mkdirp": "^0.5.1",
+    "octokit": "^2.1.0",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
