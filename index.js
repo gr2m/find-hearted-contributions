@@ -32,7 +32,7 @@ async function findHeartedContributions(options) {
 
   if (!/^https:\/\/github\.com\/.+$/.test(options.in)) {
     throw new TypeError(
-      '"in" option must be a GitHub repo url (e.g. "https://github.com/octokit"'
+      '"in" option must be a GitHub repo url (e.g. "https://github.com/octokit"',
     );
   }
 
@@ -58,15 +58,13 @@ async function findHeartedContributions(options) {
     }
 
     for (const repositoryName of state.repositories) {
-      const issuesAndPullRequestUrls = await getIssuesAndPullRequestsForRepository(
-        state,
-        repositoryName
-      );
+      const issuesAndPullRequestUrls =
+        await getIssuesAndPullRequestsForRepository(state, repositoryName);
       state.issuesAndPullRequestUrls.push(...issuesAndPullRequestUrls);
 
       const commentUrls = await getCommitCommentsForRepository(
         state,
-        repositoryName
+        repositoryName,
       );
       state.commentsUrls.push(...commentUrls);
     }

@@ -7,7 +7,7 @@ const findHeartedContributions = require("..");
 var argv = yargs
   .usage("Usage: $0 [options]")
   .example(
-    "$0 --token 0123456789012345678901234567890123456789 --in https://github.com/octokit --by gr2m --since 2019-05-01"
+    "$0 --token 0123456789012345678901234567890123456789 --in https://github.com/octokit --by gr2m --since 2019-05-01",
   )
 
   .option("token", {
