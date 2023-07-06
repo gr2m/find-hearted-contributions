@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const yargs = require("yargs");
+import yargs from "yargs";
 
-const findHeartedContributions = require("..");
+import findHeartedContributions from "../index.js";
 
 var argv = yargs
   .usage("Usage: $0 [options]")
   .example(
-    "$0 --token 0123456789012345678901234567890123456789 --in https://github.com/octokit --by gr2m --since 2019-05-01",
+    "$0 --token 0123456789012345678901234567890123456789 --in https://github.com/octokit --by gr2m --since 2019-05-01"
   )
 
   .option("token", {
@@ -39,16 +39,16 @@ var argv = yargs
   })
   .epilog("copyright 2019").argv;
 
-findHeartedContributions(argv).then((heartedItems) => {
-  console.log("\n\ndone.\n");
+const heartedItems = await findHeartedContributions(argv);
 
-  if (heartedItems.length === 0) {
-    console.log("No hearted items.");
-  }
+console.log("\n\ndone.\n");
 
-  console.log("hearted items:");
+if (heartedItems.length === 0) {
+  console.log("No hearted items.");
+}
 
-  for (const url of heartedItems.sort()) {
-    console.log(`♥️ ${url}`);
-  }
-});
+console.log("hearted items:");
+
+for (const url of heartedItems.sort()) {
+  console.log(`♥️ ${url}`);
+}

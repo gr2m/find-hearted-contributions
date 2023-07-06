@@ -1,8 +1,9 @@
 {
   "name": "find-hearted-contributions",
   "version": "0.0.0-development",
+  "type": "module",
   "description": "Find contributions that you bookmarked by adding a heart emoji",
-  "main": "index.js",
+  "exports": "./index.js",
   "bin": "bin/find-hearted-contributions.js",
   "scripts": {
     "lint": "prettier --check '{lib,bin}/**/*' index.js *.md package.json",
