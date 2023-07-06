@@ -26,5 +26,16 @@
   },
   "devDependencies": {
     "prettier": "^3.0.0"
+  },
+  "release": {
+    "branches": [
+      "+([0-9]).x",
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ]
   }
 }
