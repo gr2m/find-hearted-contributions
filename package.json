@@ -24,10 +24,10 @@
     "@octokit/rest": "^16.25.5",
     "jsonfile": "^5.0.0",
     "mkdirp": "^0.5.1",
-    "prettier": "^2.1.1",
     "yargs": "^13.2.4"
   },
   "devDependencies": {
+    "prettier": "^3.0.0",
     "semantic-release": "^21.0.1"
   }
 }
