@@ -7,10 +7,7 @@ const getCommentsForIssueOrPullRequestUrl = require("./lib/get-comments-for-issu
 const getCommitCommentsForRepository = require("./lib/get-commit-comments-for-repository");
 const getUrlIfHearted = require("./lib/get-url-if-hearted");
 
-const Octokit = require("@octokit/rest").plugin([
-  require("@octokit/plugin-throttling"),
-  require("@octokit/plugin-retry"),
-]);
+const { Octokit } = require("octokit");
 
 async function findHeartedContributions(options) {
   const MyOctokit = options.cache
@@ -18,21 +15,13 @@ async function findHeartedContributions(options) {
     : Octokit;
   const octokit = new MyOctokit({
     auth: options.token,
-    throttle: {
-      onAbuseLimit: (error, options) => {
-        octokit.log.error("onAbuseLimit", error, options);
-      },
-      onRateLimit: (error, options) => {
-        octokit.log.error("onRateLimit", error, options);
-      },
-    },
   });
 
   octokit.hook.before("request", () => process.stdout.write("."));
 
   if (!/^https:\/\/github\.com\/.+$/.test(options.in)) {
     throw new TypeError(
-      '"in" option must be a GitHub repo url (e.g. "https://github.com/octokit"',
+      '"in" option must be a GitHub repo url (e.g. "https://github.com/octokit"'
     );
   }
 
@@ -64,7 +53,7 @@ async function findHeartedContributions(options) {
 
       const commentUrls = await getCommitCommentsForRepository(
         state,
-        repositoryName,
+        repositoryName
       );
       state.commentsUrls.push(...commentUrls);
     }
